@@ -1,0 +1,39 @@
+alerts:
+  email:
+    enabled: false
+    from: alerts@nids.local
+    port: 587
+    server: smtp.gmail.com
+    to: []
+  enabled: true
+  slack:
+    enabled: false
+    webhook_url: ''
+  syslog:
+    enabled: false
+    port: 514
+    server: localhost
+database:
+  enabled: false
+  host: localhost
+  name: nids_db
+  port: 5432
+  type: postgresql
+  user: nids
+detection:
+  algorithms:
+  - random_forest
+  - isolation_forest
+  model_path: models/nids_model.pkl
+  scaler_path: models/scaler.pkl
+  threshold: 0.7
+logging:
+  directory: logs
+  level: INFO
+  max_file_size: 10485760
+network:
+  interfaces:
+  - eth0
+  packet_filter: ''
+  snapshot_len: 65535
+  timeout: 1000

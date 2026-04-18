@@ -1,0 +1,51 @@
+{
+  "alerts": {
+    "enabled": true,
+    "email": {
+      "enabled": false,
+      "server": "smtp.gmail.com",
+      "port": 587,
+      "from": "alerts@nids.local",
+      "to": []
+    },
+    "slack": {
+      "enabled": false,
+      "webhook_url": ""
+    },
+    "syslog": {
+      "enabled": false,
+      "server": "localhost",
+      "port": 514
+    }
+  },
+
+  "database": {
+    "enabled": false,
+    "type": "postgresql",
+    "host": "localhost",
+    "port": 5432,
+    "name": "nids_db",
+    "user": "nids"
+  },
+
+  "detection": {
+    "algorithms": ["random_forest", "isolation_forest"],
+    "model_path": "models/nids_model.pkl",
+    "scaler_path": "models/scaler.pkl",
+    "threshold": 0.7
+  },
+
+  "logging": {
+    "level": "INFO",
+    "directory": "logs",
+    "max_file_size": 10485760
+  },
+
+  "network": {
+    "interfaces": ["eth0"],
+    "packet_filter": "",
+    "snapshot_len": 65535,
+    "timeout": 1000
+  }
+}
+ 
