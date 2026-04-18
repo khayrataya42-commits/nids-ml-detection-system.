@@ -1,4 +1,4 @@
-# 🔐 AI-Powered Network Intrusion Detection System (NIDS)
+# 🔐 AI-Powered Network Intrusion Detection System 
 
 ## 📌 Overview
 
